@@ -69,9 +69,9 @@ class VariablesParser {
                 continue;
             }
 
-            $isNegative = (str_starts_with($variableParts[1], '-'));
-            $constantName = substr($variableParts[1], (int)$isNegative);
-            $variablesMap[$variableParts[0]] = floatval($this->mathConstants[$constantName]);
+            $isNegative = (int)str_starts_with($variableParts[1], '-');
+            $constantName = substr($variableParts[1], $isNegative);
+            $variablesMap[$variableParts[0]] = floatval($this->mathConstants[$constantName]) * pow(-1, $isNegative);
         }
 
         return $variablesMap;

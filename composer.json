@@ -1,0 +1,18 @@
+{
+    "name": "user/expression-parser",
+    "type": "project",
+    "authors": [
+        {
+            "name": "VictorDavydenko008",
+            "email": "duliya1210@gmail.com"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^3.4"
+    }
+}
